@@ -1,0 +1,122 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+
+# Not available:
+# AlignConsecutiveTableGenBreakingDAGArgColons
+# AlignArrayOfStructures
+
+# === Alignment ===
+AlignAfterOpenBracket: BlockIndent
+
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+  AlignCaseColons: true
+
+AlignEscapedNewlines: LeftWithLastLine
+AlignOperands: AlignAfterOperator
+
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseExpressionOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+
+AlwaysBreakBeforeMultilineStrings: true
+
+BinPackArguments: false
+BinPackParameters: OnePerLine
+# BinPackLongBracedList: true
+
+BitFieldColonSpacing: After
+
+# === Wrapping & Braces ===
+BreakBeforeBraces: Custom            # Use custom brace wrapping rules
+
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+BreakAdjacentStringLiterals: true
+BreakAfterAttributes: Leave
+BreakAfterReturnType: Automatic
+BreakArrays: true
+BreakBeforeBinaryOperators: None
+
+ContinuationIndentWidth: 2
+
+# === Template Declarations ===
+AlwaysBreakTemplateDeclarations: Yes # Always break after template declaration
+
+# === Indentation, Spacing, and Limits ===
+ColumnLimit: 120                     # Line length limit (characters)
+IndentCaseLabels: true               # Indent case labels under switch
+InsertNewlineAtEOF: true             # Ensure file ends with newline
+MaxEmptyLinesToKeep: 2               # Max empty lines in a row
+TabWidth: 4                          # Tab width
+
+# === Namespace Indentation ===
+NamespaceIndentation: All            # Indent all code in namespaces
+
+# === Macro Blocks ===
+MacroBlockBegin: ''                  # For formatting macro blocks (not used)
+MacroBlockEnd: ''                    # For formatting macro blocks (not used)
+
+# === Constructor Initializers ===
+BreakConstructorInitializers: AfterColon   # Line break after colon in constructor
+BreakConstructorInitializersBeforeComma: false # No break before comma
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+# All constructor initializers on one line or one per line
+
+# === Includes ===
+IncludeCategories:
+  - Regex: '^<.*'
+    Priority: 1
+  - Regex: '^".*'
+    Priority: 2
+  - Regex: '.*'
+    Priority: 3
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+
+# === Spaces ===
+SpaceAfterCStyleCast: true           # (Type) expr -> (Type) expr
+SpaceAfterTemplateKeyword: false     # template <...>
+SpaceBeforeRangeBasedForLoopColon: false  # for (auto x : y)
+SpaceInEmptyParentheses: false           # foo()
+SpacesInAngles: false                    # template<...>
+SpacesInConditionalStatement: false      # if(...)
+SpacesInCStyleCastParentheses: false     # (int)expr
+SpacesInParentheses: false               # foo(bar)
+# (Many of these ensure no extra spaces in various constructs)
